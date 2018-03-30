@@ -168,8 +168,8 @@
         if ( !url ) return '';
         url = utils.trim(url)
             .replace(/v\.youku\.com\/v_show\/id_([\w\-=]+)\.html/i, 'player.youku.com/player.php/sid/$1/v.swf')
-            .replace(/(www\.)?youtube\.com\/watch\?v=([\w\-]+)/i, "www.youtube.com/v/$2")
-            .replace(/youtu.be\/(\w+)$/i, "www.youtube.com/v/$1")
+            .replace(/(www\.)?youtube\.com\/watch\?(?:[\w=\-]+&)?v=([\w\-]+)/i, "www.youtube.com/embed/$2")
+            .replace(/youtu\.be\/([\w\-]+)(?:\?[=\w\-]+)?$/i, "www.youtube.com/embed/$1")
             .replace(/v\.ku6\.com\/.+\/([\w\.]+)\.html.*$/i, "player.ku6.com/refer/$1/v.swf")
             .replace(/www\.56\.com\/u\d+\/v_([\w\-]+)\.html/i, "player.56.com/v_$1.swf")
             .replace(/www.56.com\/w\d+\/play_album\-aid\-\d+_vid\-([^.]+)\.html/i, "player.56.com/v_$1.swf")
